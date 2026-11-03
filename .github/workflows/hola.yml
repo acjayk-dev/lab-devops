@@ -1,0 +1,12 @@
+name: hola-ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Hola DevOps desde $(hostname)"
